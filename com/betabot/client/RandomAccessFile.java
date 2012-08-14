@@ -1,9 +1,9 @@
-package com.rsfriend.client;
+package com.BetaBot.client;
 
-import com.rsfriend.utils.PreferenceData;
-import com.rsfriend.utils.UIDData;
-import com.rsfriend.Application;
-import com.rsfriend.bot.Bot;
+import com.BetaBot.utils.PreferenceData;
+import com.BetaBot.utils.UIDData;
+import com.BetaBot.Application;
+import com.BetaBot.bot.Bot;
 
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.rsfriend.client;
+package com.BetaBot.client;
 
 public interface Node {
 

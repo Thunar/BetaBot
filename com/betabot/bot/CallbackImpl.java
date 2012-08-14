@@ -1,13 +1,13 @@
-package com.rsfriend.bot;
+package com.BetaBot.bot;
 
-import com.rsfriend.script.api.MethodContext;
+import com.BetaBot.script.api.MethodContext;
 
-import com.rsfriend.client.Callback;
-import com.rsfriend.client.Render;
-import com.rsfriend.client.RenderData;
-import com.rsfriend.event.events.CharacterMovedEvent;
-import com.rsfriend.event.events.MessageEvent;
-import com.rsfriend.event.events.ServerMessageEvent;
+import com.BetaBot.client.Callback;
+import com.BetaBot.client.Render;
+import com.BetaBot.client.RenderData;
+import com.BetaBot.event.events.CharacterMovedEvent;
+import com.BetaBot.event.events.MessageEvent;
+import com.BetaBot.event.events.ServerMessageEvent;
 
 @SuppressWarnings("deprecation")
 public class CallbackImpl implements Callback {
@@ -31,7 +31,7 @@ public class CallbackImpl implements Callback {
 		}
 	}
 
-	public void rsCharacterMoved(final com.rsfriend.client.RSCharacter c, final int i) {
+	public void rsCharacterMoved(final com.BetaBot.client.RSCharacter c, final int i) {
 		CharacterMovedEvent e = new CharacterMovedEvent(bot.getMethodContext(), c, i);
 		bot.getEventManager().dispatchEvent(e);
 	}

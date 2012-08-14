@@ -1,18 +1,18 @@
-package com.rsfriend.bot;
+package com.BetaBot.bot;
 
-import com.rsfriend.Application;
-import com.rsfriend.script.internal.BreakHandler;
-import com.rsfriend.script.internal.InputManager;
-import com.rsfriend.script.internal.ScriptHandler;
-import com.rsfriend.script.api.Environment;
-import com.rsfriend.script.api.MethodContext;
+import com.BetaBot.Application;
+import com.BetaBot.script.internal.BreakHandler;
+import com.BetaBot.script.internal.InputManager;
+import com.BetaBot.script.internal.ScriptHandler;
+import com.BetaBot.script.api.Environment;
+import com.BetaBot.script.api.MethodContext;
 
-import com.rsfriend.client.Client;
-import com.rsfriend.client.input.Canvas;
-import com.rsfriend.event.EventManager;
-import com.rsfriend.event.events.PaintEvent;
-import com.rsfriend.event.events.TextPaintEvent;
-import com.rsfriend.gui.AccountManager;
+import com.BetaBot.client.Client;
+import com.BetaBot.client.input.Canvas;
+import com.BetaBot.event.EventManager;
+import com.BetaBot.event.events.PaintEvent;
+import com.BetaBot.event.events.TextPaintEvent;
+import com.BetaBot.gui.AccountManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

@@ -1,6 +1,6 @@
-package com.rsfriend.client;
+package com.BetaBot.client;
 
-import com.rsfriend.bot.Bot;
+import com.BetaBot.bot.Bot;
 
 
 public interface Callback {

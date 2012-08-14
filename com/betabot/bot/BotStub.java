@@ -1,6 +1,6 @@
-package com.rsfriend.bot;
+package com.BetaBot.bot;
 
-import com.rsfriend.utils.GlobalConfiguration;
+import com.BetaBot.utils.GlobalConfiguration;
 
 import javax.swing.*;
 import java.applet.Applet;

@@ -1,8 +1,8 @@
-package com.rsfriend.client;
+package com.BetaBot.client;
 
 
-import com.rsfriend.client.input.Keyboard;
-import com.rsfriend.client.input.Mouse;
+import com.BetaBot.client.input.Keyboard;
+import com.BetaBot.client.input.Mouse;
 
 import java.awt.*;
 

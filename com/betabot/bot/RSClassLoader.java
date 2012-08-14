@@ -1,4 +1,4 @@
-package com.rsfriend.bot;
+package com.BetaBot.bot;
 
 import java.awt.*;
 import java.io.*;

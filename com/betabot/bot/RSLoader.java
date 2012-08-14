@@ -1,12 +1,12 @@
-package com.rsfriend.bot;
+package com.BetaBot.bot;
 
-import com.rsfriend.Application;
-import com.rsfriend.loader.script.ParseException;
-import com.rsfriend.utils.GlobalConfiguration;
-import com.rsfriend.utils.HttpAgent;
+import com.BetaBot.Application;
+import com.BetaBot.loader.script.ParseException;
+import com.BetaBot.utils.GlobalConfiguration;
+import com.BetaBot.utils.HttpAgent;
 
-import com.rsfriend.client.Loader;
-import com.rsfriend.loader.ClientLoader;
+import com.BetaBot.client.Loader;
+import com.BetaBot.loader.ClientLoader;
 
 import java.applet.Applet;
 import java.awt.*;
