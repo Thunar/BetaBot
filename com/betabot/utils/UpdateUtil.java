@@ -8,128 +8,128 @@ import java.net.URLConnection;
 import java.util.logging.Logger;
 
 /*
-Update utility by TheShadow
+ V 1.1 Made by Heaven
  */
 public class UpdateUtil {
 
-	private static final Logger log = Logger.getLogger(UpdateUtil.class.getName());
-	private final Window parent;
-	private static int latest = -1;
+  private static final Logger log = Logger.getLogger(UpdateUtil.class.getName());
+  private final Window parent;
+  private static int latest = -1;
 
-	public UpdateUtil(final Window parent) {
-		this.parent = parent;
-	}
+  public UpdateUtil(final Window parent) {
+    this.parent = parent;
+  }
 
-	public void checkUpdate(final boolean verbose) {
-		if (verbose) {
-			UpdateUtil.log.info("Checking for update...");
-		}
-		if (getLatestVersion() > GlobalConfiguration.getVersion()) {
-			UpdateUtil.log.info("New version available!");
-			final int update = JOptionPane.showConfirmDialog(parent,
-					"A newer version is available. Do you wish to update?",
-					"Update Found", JOptionPane.YES_NO_OPTION);
-			if (update != 0) {
-				UpdateUtil.log.info("Cancelled update");
-			}
-			if (update == 0) {
-				updateBot();
-			}
-		} else {
-			if (verbose) {
-				UpdateUtil.log.info("You have the latest version");
-			}
-		}
-	}
+  public void checkUpdate(final boolean verbose) {
+    if (verbose) {
+      UpdateUtil.log.info("Searching for Updates!");
+    }
+    if (getLatestVersion() > GlobalConfiguration.getVersion()) {
+      UpdateUtil.log.info("New Update Found!");
+      final int update = JOptionPane.showConfirmDialog(parent,
+          "Update available. Do you wish to update?",
+          "Update Found", JOptionPane.YES_NO_OPTION);
+      if (update != 0) {
+        UpdateUtil.log.info("Cancelled update");
+      }
+      if (update == 0) {
+        updateBot();
+      }
+    } else {
+      if (verbose) {
+        UpdateUtil.log.info("You have the latest update");
+      }
+    }
+  }
 
-	@SuppressWarnings("finally")
-	public static boolean download(final String address, final String localFileName) {
+  @SuppressWarnings("finally")
+  public static boolean download(final String address, final String localFileName) {
 
-		OutputStream out = null;
-		URLConnection conn;
-		InputStream in = null;
-		try {
-			final URL url = new URL(address);
+    OutputStream out = null;
+    URLConnection conn;
+    InputStream in = null;
+    try {
+      final URL url = new URL(address);
 
-			out = new BufferedOutputStream(new FileOutputStream(localFileName));
-			conn = url.openConnection();
-			in = conn.getInputStream();
+      out = new BufferedOutputStream(new FileOutputStream(localFileName));
+      conn = url.openConnection();
+      in = conn.getInputStream();
 
-			final byte[] buffer = new byte[1024];
-			int numRead;
-			while ((numRead = in.read(buffer)) != -1) {
-				out.write(buffer, 0, numRead);
-			}
-		} catch (final Exception exception) {
-			UpdateUtil.log.info("Downloading failed!");
-			return false;
-		} finally {
-			try {
-				if (in != null) {
-					in.close();
-				}
-				if (out != null) {
-					out.close();
-				}
-			} catch (final IOException ioe) {
-				UpdateUtil.log.info("Downloading failed!");
-				return false;
-			}
-			return true;
-		}
+      final byte[] buffer = new byte[1024];
+      int numRead;
+      while ((numRead = in.read(buffer)) != -1) {
+        out.write(buffer, 0, numRead);
+      }
+    } catch (final Exception exception) {
+      UpdateUtil.log.info("Download Failed! What did you do?");
+      return false;
+    } finally {
+      try {
+        if (in != null) {
+          in.close();
+        }
+        if (out != null) {
+          out.close();
+        }
+      } catch (final IOException ioe) {
+        UpdateUtil.log.info("Download Failed! What did you do?");
+        return false;
+      }
+      return true;
+    }
 
-	}
+  }
 
-	public static int getLatestVersion() {
-		if (latest != -1) {
-			return latest;
-		}
-		InputStream is = null;
-		InputStreamReader isr = null;
-		BufferedReader reader = null;
-		try {
-			is = new URL(GlobalConfiguration.Paths.URLs.VERSION).openConnection().getInputStream();
-			isr = new InputStreamReader(is);
-			reader = new BufferedReader(isr);
-			String s = reader.readLine().trim();
-			latest = Integer.parseInt(s);
-			return latest;
-		} catch (Exception e) {
-		} finally {
-			try {
-				if (is != null) {
-					is.close();
-				}
-				if (isr != null) {
-					isr.close();
-				}
-				if (reader != null) {
-					reader.close();
-				}
-			} catch (IOException ioe) {
-			}
-		}
-		UpdateUtil.log.info("Unable to download latest version information.");
-		return -1;
-	}
+  public static int getLatestVersion() {
+    if (latest != -1) {
+      return latest;
+    }
+    InputStream is = null;
+    InputStreamReader isr = null;
+    BufferedReader reader = null;
+    try {
+      is = new URL(GlobalConfiguration.Paths.URLs.VERSION).openConnection().getInputStream();
+      isr = new InputStreamReader(is);
+      reader = new BufferedReader(isr);
+      String s = reader.readLine().trim();
+      latest = Integer.parseInt(s);
+      return latest;
+    } catch (Exception e) {
+    } finally {
+      try {
+        if (is != null) {
+          is.close();
+        }
+        if (isr != null) {
+          isr.close();
+        }
+        if (reader != null) {
+          reader.close();
+        }
+      } catch (IOException ioe) {
+      }
+    }
+    UpdateUtil.log.info("Unable to Find latest Update!.");
+    return -1;
+  }
 
-	private void updateBot() {
-		UpdateUtil.log.info("Downloading update...");
+  private void updateBot() {
+    UpdateUtil.log.info("Downloading update. Please Wait...");
 
-		final String jarNew = GlobalConfiguration.NAME + "-"
-				+ getLatestVersion() + ".jar";
+    final String jarNew = GlobalConfiguration.NAME + "-"
+        + getLatestVersion() + ".jar";
 
-		download(GlobalConfiguration.Paths.URLs.DOWNLOAD, jarNew);
+    download(GlobalConfiguration.Paths.URLs.DOWNLOAD, jarNew);
 
-		final String jarOld = GlobalConfiguration.NAME + "-"
-				+ GlobalConfiguration.getVersion() + ".jar";
+    final String jarOld = GlobalConfiguration.NAME + "-"
+        + GlobalConfiguration.getVersion() + ".jar";
 
-		final Runtime run = Runtime.getRuntime();
+    final Runtime run = Runtime.getRuntime();
 
-		try {
-			run.exec("java -jar " + jarNew + " delete " + jarOld);
-			System.exit(0);
-		} catch (final IOException ignored) {
-		}
-	}
+    try {
+      run.exec("java -jar " + jarNew + " delete " + jarOld);
+      System.exit(0);
+    } catch (final IOException ignored) {
+    }
+  }
 }
