@@ -46,7 +46,7 @@ public final class RSClassLoader extends ClassLoader {
 				byte[] data = bos.toByteArray();
 
 				//Store it so we can load it
-				this.classes.put("org.rsbot.client.RandomAccessFile", data);
+				this.classes.put("com.betabot.client.RandomAccessFile", data);
 			} catch (IOException e) {
 				e.printStackTrace();
 			} finally {

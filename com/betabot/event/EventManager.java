@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 public class EventManager implements Runnable {
-
 	public static class KillEvent extends RSEvent {
 		private static final long serialVersionUID = 3426050317048250049L;
 
@@ -39,7 +38,7 @@ public class EventManager implements Runnable {
 	 *
 	 * @param e The event object to dispatch.
 	 */
-	public void dispatchEvent(EventObject e) {
+	public void dispatchEvent(final EventObject e) {
 		synchronized (queue) {
 			boolean added = false;
 			for (int off = 0; off < queue.size(); ++off) {
@@ -62,7 +61,7 @@ public class EventManager implements Runnable {
 	 *
 	 * @param event The event to fire.
 	 */
-	public void processEvent(EventObject event) {
+	public void processEvent(final EventObject event) {
 		multicaster.fireEvent(event);
 	}
 
@@ -71,7 +70,7 @@ public class EventManager implements Runnable {
 	 *
 	 * @return <tt>true</tt> if the thread is an event thread; otherwise <tt>false</tt>.
 	 */
-	public boolean isEventThread() {
+	boolean isEventThread() {
 		synchronized (threadLock) {
 			return Thread.currentThread() == eventThread;
 		}
@@ -96,14 +95,14 @@ public class EventManager implements Runnable {
 	 *             <tt>false</tt> to submit the kill event and return
 	 *             immediately.
 	 */
-	public void killThread(boolean wait) {
-		EventObject event = new KillEvent();
+	public void killThread(final boolean wait) {
+		final EventObject event = new KillEvent();
 		synchronized (event) {
 			dispatchEvent(event);
 			if (wait) {
 				try {
 					event.wait();
-				} catch (InterruptedException e) {
+				} catch (final InterruptedException e) {
 					log.info("wait for kill event interrupted!");
 				}
 			}
@@ -115,7 +114,7 @@ public class EventManager implements Runnable {
 	 *
 	 * @param listener the listener to add.
 	 */
-	public void addListener(EventListener listener) {
+	public void addListener(final EventListener listener) {
 		multicaster.addListener(listener);
 	}
 
@@ -125,7 +124,7 @@ public class EventManager implements Runnable {
 	 * @param listener the listener to add.
 	 * @param mask     the event type mask.
 	 */
-	public void addListener(EventListener listener, long mask) {
+	public void addListener(final EventListener listener, final long mask) {
 		multicaster.addListener(listener, mask);
 	}
 
@@ -134,7 +133,7 @@ public class EventManager implements Runnable {
 	 *
 	 * @param listener the listener to remove.
 	 */
-	public void removeListener(EventListener listener) {
+	public void removeListener(final EventListener listener) {
 		multicaster.removeListener(listener);
 	}
 

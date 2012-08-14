@@ -1,3 +1,4 @@
+ 
 package com.betabot.utils;
 
 import com.betabot.log.LogFormatter;
@@ -55,8 +56,8 @@ public class GlobalConfiguration {
 
 		public static class URLs {
 			private static final String BASE = "BetaBot.com";
-			public static final String DOWNLOAD = BASE + "download";
-			public static final String VERSION = BASE + "version.txt";
+			public static final String DOWNLOAD = "http://heavbots.site90.com/BetaBot.jar";
+			public static final String VERSION = "http://pastebin.com/raw.php?i=hyTWA5Wb";
 			public static final String SDN_CONTROL = BASE + "sdn-control";
 			public static final String UPDATE = null;
 			public static final String WEB = null;
@@ -157,7 +158,7 @@ public class GlobalConfiguration {
 		}
 
 		public static String getHackCache() {
-			return Paths.getCacheDirectory() + File.separator + "hack.dat";
+			return Paths.getCacheDirectory() + File.separator + "hack.dat"; // erm :L Not sure if that shd be their?
 		}
 
 		public static String getSettingsDirectory() {

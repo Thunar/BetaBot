@@ -156,4 +156,9 @@ public class RestrictedSecurityManager extends SecurityManager {
 			throw new SecurityException();
 		super.checkWrite(file);
 	}
+
+	public static void assertNonScript() {
+		// TODO Auto-generated method stub
+		
+	}
 }

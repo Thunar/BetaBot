@@ -1,7 +1,6 @@
 package com.betabot.script.api;
 
 import com.betabot.script.Random;
-import com.betabot.script.randoms.*;
 import com.betabot.script.wrappers.RSComponent;
 import com.betabot.script.wrappers.RSInterface;
 import com.betabot.script.wrappers.RSTile;

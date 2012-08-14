@@ -120,5 +120,10 @@ public class StringUtil {
 		}
 	}
 
+	public static String byteArrayToHexString(byte[] digest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

@@ -57,6 +57,12 @@ public class Bot {
 	 * Whether or not rendering is enabled.
 	 */
 	public volatile boolean disableRendering = false;
+	
+	/**
+	 * Whether or not graphics are enabled.
+	 */
+	
+	public volatile boolean disableGraphics = false;
 
 	/**
 	 * Whether or not the canvas is enabled.
@@ -192,6 +198,7 @@ public class Bot {
 		}
 		return backBuffer.getGraphics();
 	}
+	
 
 	public BufferedImage getImage() {
 		return image;

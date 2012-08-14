@@ -3,7 +3,6 @@ package com.betabot.script.internal;
 import com.betabot.script.Script;
 import com.betabot.script.ScriptManifest;
 import com.betabot.script.internal.event.ScriptListener;
-import com.betabot.script.randoms.*;
 import com.betabot.bot.Bot;
 
 
