@@ -1,8 +1,8 @@
-package com.rsfriend.client.input;
+package com.betabot.client.input;
 
-import com.rsfriend.Application;
+import com.betabot.Application;
 
-import com.rsfriend.bot.Bot;
+import com.betabot.bot.Bot;
 
 import javax.swing.*;
 import java.awt.*;

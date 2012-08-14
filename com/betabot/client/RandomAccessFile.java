@@ -1,9 +1,9 @@
-package com.BetaBot.client;
+package com.betabot.client;
 
-import com.BetaBot.utils.PreferenceData;
-import com.BetaBot.utils.UIDData;
-import com.BetaBot.Application;
-import com.BetaBot.bot.Bot;
+import com.betabot.utils.PreferenceData;
+import com.betabot.utils.UIDData;
+import com.betabot.Application;
+import com.betabot.bot.Bot;
 
 
 import java.io.File;

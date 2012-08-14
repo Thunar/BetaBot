@@ -1,4 +1,4 @@
-package com.rsfriend.client.input;
+package com.betabot.client.input;
 
 import java.awt.*;
 import java.awt.event.*;

@@ -1,12 +1,12 @@
-package com.rsfriend.script.internal.wrappers;
+package com.betabot.script.internal.wrappers;
 
-import com.rsfriend.client.NodeDeque;
+import com.betabot.client.NodeDeque;
 
 @SuppressWarnings("unchecked")
 public class Deque<N> {
 
 	private final NodeDeque nl;
-	private com.rsfriend.client.Node current;
+	private com.betabot.client.Node current;
 
 	public Deque(NodeDeque nl) {
 		this.nl = nl;
@@ -14,7 +14,7 @@ public class Deque<N> {
 
 	public int size() {
 		int size = 0;
-		com.rsfriend.client.Node node = nl.getTail().getPrevious();
+		com.betabot.client.Node node = nl.getTail().getPrevious();
 
 		while (node != nl.getTail()) {
 			node = node.getPrevious();
@@ -25,7 +25,7 @@ public class Deque<N> {
 	}
 
 	public N getHead() {
-		com.rsfriend.client.Node node = nl.getTail().getNext();
+		com.betabot.client.Node node = nl.getTail().getNext();
 
 		if (node == nl.getTail()) {
 			current = null;
@@ -37,7 +37,7 @@ public class Deque<N> {
 	}
 
 	public N getTail() {
-		com.rsfriend.client.Node node = nl.getTail().getPrevious();
+		com.betabot.client.Node node = nl.getTail().getPrevious();
 
 		if (node == nl.getTail()) {
 			current = null;
@@ -49,7 +49,7 @@ public class Deque<N> {
 	}
 
 	public N getNext() {
-		com.rsfriend.client.Node node = current;
+		com.betabot.client.Node node = current;
 
 		if (node == nl.getTail()) {
 			current = null;

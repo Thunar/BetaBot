@@ -1,12 +1,12 @@
-package com.BetaBot.bot;
+package com.betabot.bot;
 
-import com.BetaBot.Application;
-import com.BetaBot.loader.script.ParseException;
-import com.BetaBot.utils.GlobalConfiguration;
-import com.BetaBot.utils.HttpAgent;
+import com.betabot.Application;
+import com.betabot.loader.script.ParseException;
+import com.betabot.utils.GlobalConfiguration;
+import com.betabot.utils.HttpAgent;
 
-import com.BetaBot.client.Loader;
-import com.BetaBot.loader.ClientLoader;
+import com.betabot.client.Loader;
+import com.betabot.loader.ClientLoader;
 
 import java.applet.Applet;
 import java.awt.*;

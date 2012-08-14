@@ -1,6 +1,6 @@
-package com.BetaBot.client;
+package com.betabot.client;
 
-import com.BetaBot.bot.Bot;
+import com.betabot.bot.Bot;
 
 
 public interface Callback {

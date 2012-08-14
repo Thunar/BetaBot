@@ -1,13 +1,13 @@
-package com.BetaBot.bot;
+package com.betabot.bot;
 
-import com.BetaBot.script.api.MethodContext;
+import com.betabot.script.api.MethodContext;
 
-import com.BetaBot.client.Callback;
-import com.BetaBot.client.Render;
-import com.BetaBot.client.RenderData;
-import com.BetaBot.event.events.CharacterMovedEvent;
-import com.BetaBot.event.events.MessageEvent;
-import com.BetaBot.event.events.ServerMessageEvent;
+import com.betabot.client.Callback;
+import com.betabot.client.Render;
+import com.betabot.client.RenderData;
+import com.betabot.event.events.CharacterMovedEvent;
+import com.betabot.event.events.MessageEvent;
+import com.betabot.event.events.ServerMessageEvent;
 
 @SuppressWarnings("deprecation")
 public class CallbackImpl implements Callback {
@@ -31,7 +31,7 @@ public class CallbackImpl implements Callback {
 		}
 	}
 
-	public void rsCharacterMoved(final com.BetaBot.client.RSCharacter c, final int i) {
+	public void rsCharacterMoved(final com.betabot.client.RSCharacter c, final int i) {
 		CharacterMovedEvent e = new CharacterMovedEvent(bot.getMethodContext(), c, i);
 		bot.getEventManager().dispatchEvent(e);
 	}

@@ -1,4 +1,4 @@
-package com.BetaBot.client;
+package com.betabot.client;
 
 public interface SoftReference extends Reference {
 

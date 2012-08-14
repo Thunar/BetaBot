@@ -1,6 +1,6 @@
-package com.BetaBot.bot;
+package com.betabot.bot;
 
-import com.BetaBot.utils.GlobalConfiguration;
+import com.betabot.utils.GlobalConfiguration;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

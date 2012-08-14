@@ -3,7 +3,7 @@
  * Copyright (c) 2000-2007 INRIA, France Telecom
  * All rights reserved.
  */
-package com.rsfriend.loader.asm;
+package com.betabot.loader.asm;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

@@ -1,18 +1,18 @@
-package com.BetaBot.bot;
+package com.betabot.bot;
 
-import com.BetaBot.Application;
-import com.BetaBot.script.internal.BreakHandler;
-import com.BetaBot.script.internal.InputManager;
-import com.BetaBot.script.internal.ScriptHandler;
-import com.BetaBot.script.api.Environment;
-import com.BetaBot.script.api.MethodContext;
+import com.betabot.Application;
+import com.betabot.script.internal.BreakHandler;
+import com.betabot.script.internal.InputManager;
+import com.betabot.script.internal.ScriptHandler;
+import com.betabot.script.api.Environment;
+import com.betabot.script.api.MethodContext;
 
-import com.BetaBot.client.Client;
-import com.BetaBot.client.input.Canvas;
-import com.BetaBot.event.EventManager;
-import com.BetaBot.event.events.PaintEvent;
-import com.BetaBot.event.events.TextPaintEvent;
-import com.BetaBot.gui.AccountManager;
+import com.betabot.client.Client;
+import com.betabot.client.input.Canvas;
+import com.betabot.event.EventManager;
+import com.betabot.event.events.PaintEvent;
+import com.betabot.event.events.TextPaintEvent;
+import com.betabot.gui.AccountManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

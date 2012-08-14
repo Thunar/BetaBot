@@ -1,16 +1,16 @@
-package com.rsfriend.script.internal.wrappers;
+package com.betabot.script.internal.wrappers;
 
 class StatusQueue {
 
-	private final com.rsfriend.client.StatusNodeList nl;
-	private com.rsfriend.client.StatusNode c_node;
+	private final com.betabot.client.StatusNodeList nl;
+	private com.betabot.client.StatusNode c_node;
 
-	public StatusQueue(final com.rsfriend.client.StatusNodeList nl) {
+	public StatusQueue(final com.betabot.client.StatusNodeList nl) {
 		this.nl = nl;
 	}
 
-	public com.rsfriend.client.StatusNode getFirst() {
-		final com.rsfriend.client.StatusNode node = nl.getHead().getNext();
+	public com.betabot.client.StatusNode getFirst() {
+		final com.betabot.client.StatusNode node = nl.getHead().getNext();
 
 		if (node == nl.getHead()) {
 			c_node = null;
@@ -21,8 +21,8 @@ class StatusQueue {
 		return node;
 	}
 
-	public com.rsfriend.client.StatusNode getLast() {
-		final com.rsfriend.client.StatusNode node = nl.getHead().getPrevious();
+	public com.betabot.client.StatusNode getLast() {
+		final com.betabot.client.StatusNode node = nl.getHead().getPrevious();
 
 		if (node == nl.getHead()) {
 			c_node = null;
@@ -33,8 +33,8 @@ class StatusQueue {
 		return node;
 	}
 
-	public com.rsfriend.client.StatusNode getNext() {
-		final com.rsfriend.client.StatusNode node = c_node;
+	public com.betabot.client.StatusNode getNext() {
+		final com.betabot.client.StatusNode node = c_node;
 
 		if (node == nl.getHead() || node == null) {
 			c_node = null;
@@ -45,8 +45,8 @@ class StatusQueue {
 		return node;
 	}
 
-	public com.rsfriend.client.StatusNode getPrevious() {
-		final com.rsfriend.client.StatusNode node = c_node;
+	public com.betabot.client.StatusNode getPrevious() {
+		final com.betabot.client.StatusNode node = c_node;
 
 		if (node == nl.getHead() || node == null) {
 			c_node = null;
@@ -59,7 +59,7 @@ class StatusQueue {
 
 	public int size() {
 		int size = 0;
-		com.rsfriend.client.StatusNode node = nl.getHead().getPrevious();
+		com.betabot.client.StatusNode node = nl.getHead().getPrevious();
 
 		while (node != nl.getHead()) {
 			node = node.getPrevious();

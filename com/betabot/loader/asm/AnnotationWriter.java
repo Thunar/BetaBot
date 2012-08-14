@@ -3,7 +3,7 @@
  * Copyright (c) 2000-2007 INRIA, France Telecom
  * All rights reserved.
  */
-package com.rsfriend.loader.asm;
+package com.betabot.loader.asm;
 
 /**
  * An {@link AnnotationVisitor} that generates annotations in bytecode form.

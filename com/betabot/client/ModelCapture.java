@@ -1,4 +1,4 @@
-package com.BetaBot.client;
+package com.betabot.client;
 
 import java.util.Arrays;
 

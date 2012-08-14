@@ -1,8 +1,8 @@
-package com.BetaBot.client;
+package com.betabot.client;
 
 
-import com.BetaBot.client.input.Keyboard;
-import com.BetaBot.client.input.Mouse;
+import com.betabot.client.input.Keyboard;
+import com.betabot.client.input.Mouse;
 
 import java.awt.*;
 

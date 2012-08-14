@@ -1,12 +1,12 @@
-package com.rsfriend.script.internal.wrappers;
+package com.betabot.script.internal.wrappers;
 
-import com.rsfriend.client.NodeSubQueue;
+import com.betabot.client.NodeSubQueue;
 
 @SuppressWarnings("unchecked")
-public class Queue<N extends com.rsfriend.client.NodeSub> {
+public class Queue<N extends com.betabot.client.NodeSub> {
 
 	private final NodeSubQueue nl;
-	private com.rsfriend.client.NodeSub current;
+	private com.betabot.client.NodeSub current;
 
 	public Queue(NodeSubQueue nl) {
 		this.nl = nl;
@@ -14,7 +14,7 @@ public class Queue<N extends com.rsfriend.client.NodeSub> {
 
 	public int size() {
 		int size = 0;
-		com.rsfriend.client.NodeSub node = nl.getTail().getPrevSub();
+		com.betabot.client.NodeSub node = nl.getTail().getPrevSub();
 
 		while (node != nl.getTail()) {
 			node = node.getPrevSub();
@@ -25,7 +25,7 @@ public class Queue<N extends com.rsfriend.client.NodeSub> {
 	}
 
 	public N getHead() {
-		com.rsfriend.client.NodeSub node = nl.getTail().getNextSub();
+		com.betabot.client.NodeSub node = nl.getTail().getNextSub();
 
 		if (node == nl.getTail()) {
 			current = null;
@@ -37,7 +37,7 @@ public class Queue<N extends com.rsfriend.client.NodeSub> {
 	}
 
 	public N getNext() {
-		com.rsfriend.client.NodeSub node = current;
+		com.betabot.client.NodeSub node = current;
 
 		if (node == nl.getTail()) {
 			current = null;

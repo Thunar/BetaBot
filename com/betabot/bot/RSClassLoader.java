@@ -1,4 +1,4 @@
-package com.BetaBot.bot;
+package com.betabot.bot;
 
 import java.awt.*;
 import java.io.*;
